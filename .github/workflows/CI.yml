@@ -30,6 +30,9 @@ jobs:
       uses: gradle/actions/setup-gradle@v4
     - name: Build with Gradle
       run: ./gradlew -b build.gradle --no-daemon
+    - name: list the contents of folder /build
+      run: ls ./build/libs
+    
     - name: Login to Docker Hub
       uses: docker/login-action@v3
       with:
